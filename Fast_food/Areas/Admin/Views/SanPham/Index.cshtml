@@ -1,0 +1,377 @@
+﻿@model Fast_food.Models.SanPham;
+@using Microsoft.AspNetCore.Mvc.ViewFeatures;
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    var items = ViewBag.items as IList<Fast_food.Models.SanPham>;
+    var phantrang = ViewBag.dssp as X.PagedList.IPagedList<Fast_food.Models.SanPham>;
+}
+<style>
+    .btn-create {
+        padding-top: 10px;
+        padding-left: 30px;
+    }
+</style>
+<div class="btn-create">
+    <button type="button" class="btn btn-success mb-1" data-toggle="modal" data-target="#Add-SanPham">
+        Thêm mới sản phẩm
+    </button>
+</div>
+<div class="col-lg-12">
+    <div class="card">
+        <div class="card-header">
+            <strong class="card-title">Danh sách sản phẩm</strong>
+        </div>
+        <div class="card-body">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Tên sản phẩm</th>
+                        <th scope="col">Hình ảnh</th>
+                        <th scope="col">Loại</th>
+                        <th scope="col">Giá</th>
+                        <th scope="col">Trạng thái</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody class="tbody">
+                    @foreach (var i in items)
+                    {
+                        var imgpath = string.Format("/SanPham/{0}", i.HinhAnh);
+                        <tr>
+                            <th scope="row">@i.IdSp</th>
+                            <td>@i.TenSp</td>
+                            <td><img style="width:80px;height:80px;" src="@("/SanPham/" +i.HinhAnh)" /></td>
+                            <td data-product-id="@i.IdLoai"></td>
+                            <td hidden data-product-name></td>
+                            <td>@i.Gia</td>
+                            @if (i.TrangThai == true)
+                            {
+                                <td>Đang bán</td>
+                            }
+                            else
+                            {
+                                <td>Ngưng bán</td>
+                            }
+                            <td>
+                                <a href="#" onclick="return editData(@i.IdSp)" data-toggle="modal" data-target="#Edit-SanPham">
+                                    <i class="fa fa-edit"></i>
+                                </a> |
+                                <a href="#" onclick="if(confirm('Ban co muon xoa ?')) { deleteData(@i.IdSp); return true; } else { return false; }">
+                                    <i class="fa fa-trash-o"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="card-footer">
+            <!-- Phân trang -->
+            <ul class="pagination justify-content-center" id="pagination"></ul>
+        </div>
+    </div>
+</div>
+
+@*Modal*@
+<div class="modal fade" id="Add-SanPham" tabindex="-1" role="dialog" aria-labelledby="Add-SanPham-Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="Add-SanPham-Label">Thêm thông tin sản phẩm</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                    <form action="~/Admin/SanPham/Create" method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="company" class=" form-control-label">Tên sản phẩm</label>
+                            <input type="text" id="TenSP" name="TenSP" placeholder="Tên sản phẩm" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Hình ảnh sản phẩm</label>
+                            <input type="file" id="imageFile" name="file" class="form-control" onchange="chosseFile(this)"
+                                   accept="image/gif, image/jpeg, image/png, image/jpg">
+                            <img src="" id="image" alt="Anh" width="200" height="200">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-control-label">Loại sản phẩm</label>
+                            @Html.DropDownListFor(model => model.IdLoai,ViewBag.dslsp as SelectList)
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-8">
+                                <div class="form-group">
+                                    <label for="city" class=" form-control-label">Giá bán</label>
+                                    <input type="text" id="Gia" name="Gia" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-8">
+                                <div class="form-group">
+                                    <label for="postal-code" class=" form-control-label">Trạng thái</label>
+                                    <select name="TrangThai" id="select" class="form-control">
+                                        <option>Trạng thái</option>
+                                        <option value="true">Đang bán</option>
+                                        <option value="false">Ngưng bán</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="submit" class="btn btn-primary" value="Lưu thông tin" />
+                    </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                @* <button type="button" class="btn btn-primary" onclick="Save();">Confirm</button>*@
+            </div>
+        </div>
+    </div>
+</div>
+@*Modal sửa*@
+<div class="modal fade" id="Edit-SanPham" tabindex="-1" role="dialog" aria-labelledby="Add-SanPham-Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="Add-SanPham-Label">Thêm thông tin sản phẩm</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                @using (Html.BeginForm("EditData", "SanPham", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                {
+                    <div class="form-group">
+                        <label for="company" class=" form-control-label">Tên sản phẩm</label>
+                        <input type="text" id="idsp" name="IdSP" hidden class="form-control">
+                        <input type="text" id="tensp" name="TenSP" placeholder="Tên sản phẩm" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Hình ảnh sản phẩm</label>
+                        <input type="file" id="imageFile" name="file" class="form-control" onchange="chosseFile(this)"
+                               accept="image/gif, image/jpeg, image/png, image/jpg">
+                        <img src="" id="hinhanh" alt="Anh" width="200" height="200">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-control-label">Loại sản phẩm</label>
+                        @Html.DropDownListFor(model => model.IdLoai,ViewBag.dslsp as SelectList)
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-8">
+                            <div class="form-group">
+                                <label for="city" class=" form-control-label">Giá bán</label>
+                                <input type="text" id="gia" name="Gia" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <div class="form-group">
+                                <label for="postal-code" class=" form-control-label">Trạng thái</label>
+                                <select name="TrangThai" id="trangthai" class="form-control">
+                                    <option value="true">Đang bán</option>
+                                    <option value="false">Ngưng bán</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="submit" class="btn btn-primary" value="Sửa thông tin" />
+                }
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" onclick="Save();">Confirm</button>
+            </div>
+        </div>
+    </div>
+</div>
+@if (TempData["Message"] != null || TempData["Bell"] != null)
+{
+    @Html.Raw(TempData["Message"])
+    ;
+    @Html.Raw(TempData["Bell"])
+    ;
+}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>    
+<script>
+    function chosseFile(fileInput) {
+        if (fileInput.files && fileInput.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                $('#image').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(fileInput.files[0]);
+        }
+    }
+</script>
+<script>
+    function chosseFile(fileInput) {
+        if (fileInput.files && fileInput.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                $('#image').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(fileInput.files[0]);
+        }
+    }
+</script>
+<script>
+    $(function () {
+        $('#add-product-form').submit(function (e) {
+            e.preventDefault();
+            $.ajax({
+                url: '@Url.Action("Create", "SanPham", new { area = "Admin" })',
+                type: 'POST',
+                data: $(this).serialize(),
+                success: function (result) {
+                    if (result.success) {
+                        alert('Thêm sản phẩm thành công!');
+                        $('#Add-SanPham').modal('hide');
+                    } else {
+                        alert('Có lỗi xảy ra khi thêm sản phẩm: ' + result.errors.join('; '));
+                    }
+                },
+                error: function () {
+                    alert('Có lỗi xảy ra khi thực hiện thao tác!');
+                }
+            });
+        });
+    });
+</script>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.ajax({
+            url: "/Admin/SanPham/GetLoaiSanPham",
+            type: "GET",
+            contentType: 'application/json;charset=UTF-8',
+            dataType: "json",
+            success: function (data) {
+                $.each(data, function (index, value) {
+                    $("#loaiSanPhamDropdown").append('<option name="' + value.value + '">' + value.text + '</option>');
+
+                });
+            }
+        });
+    });
+</script>
+<script>
+    function refreshPage() {
+        location.reload();
+    }
+    $(document).ready(function () {
+        var productIds = [];
+        // Lấy danh sách ID sản phẩm từ các phần tử TD
+        $('td[data-product-id]').each(function () {
+            var id = $(this).data('product-id');
+            productIds.push(id);
+        });
+
+        // Lấy danh sách tên sản phẩm dựa trên danh sách ID sản phẩm
+        $.ajax({
+            type: "POST",
+            url: "/Admin/SanPham/GetProductNames",
+            data: { productIds: productIds },
+            success: function (result) {
+                $('td[data-product-id]').each(function () {
+                    var id = $(this).data('product-id');
+                    var productName = result[id];
+                    $(this).text(productName);
+                });
+            },
+            error: function (xhr) {
+                console.log(xhr.responseText);
+            }
+        });
+    });
+    //Xóa sản phẩm
+    function deleteData(id) {
+        // Lấy dữ liệu cần sửa đổi từ cơ sở dữ liệu bằng Ajax
+        $.ajax({
+            url: '/Admin/SanPham/DeleteData/' + id,
+            type: 'POST',
+            contentType: 'application/json;charset=UTF-8',
+            dataType: 'json',
+            success: function () {
+                alert('Xóa thành công');
+                refreshPage();
+            }
+        });
+    }
+    //Edit sản phẩm
+    function editData(id) {
+        // Lấy dữ liệu cần sửa đổi từ cơ sở dữ liệu bằng Ajax
+        $.ajax({
+            url: '/Admin/SanPham/GetData/' + id,
+            type: 'GET',
+            contentType: 'application/json;charset=UTF-8',
+            dataType: 'json',
+            success: function (data) {
+                // Điền dữ liệu vào biểu mẫu
+                $('#idsp').val(data.idSp);
+                $('#tensp').val(data.tenSp);
+                $('#gia').val(data.gia);
+                $.ajax({
+                    url: '/Admin/SanPham/GetLoaiSanPham',
+                    type: 'GET',
+                    contentType: 'application/json;charset=UTF-8',
+                    dataType: 'json',
+                    success: function (data) {
+                        var selectHtml = '<select id="IdLoai" name="IdLoai" class="form-control">';
+                        $.each(data, function (index, item) {
+                            if (item.value == data.idLoai) {
+                                selectHtml += '<option value="' + item.value + '" selected>' + item.text + '</option>';
+                            } else {
+                                selectHtml += '<option value="' + item.value + '">' + item.text + '</option>';
+                            }
+                        });
+                        selectHtml += '</select>';
+                        $('#IdLoai').replaceWith(selectHtml);
+                    }
+                });
+                if (data.trangThai) {
+                    $('#trangthai option[value="true"]').prop('selected', true);
+                } else {
+                    $('#trangthai option[value="false"]').prop('selected', true);
+                }
+                // Hiển thị hình ảnh
+                $('#hinhanh').attr('src', '/SanPham/' + data.hinhAnh);
+                // Hiển thị Modal
+                $('#Edit-SanPham').modal('show');
+            }
+        });
+    }
+    $(document).ready(function () {
+        // Số phần tử trên mỗi trang
+        var pageSize = 8;
+
+        // Tổng số phần tử
+        var count = $(".tbody tr").length;
+
+        // Tính số trang
+        var pageCount = Math.ceil(count / pageSize);
+
+        // Thêm các nút phân trang vào phần footer của bảng
+        for (var i = 1; i <= pageCount; i++) {
+            $("#pagination").append('<li class="page-item"><a class="page-link" href="#">' + i + '</a></li>');
+        }
+
+        // Mặc định hiển thị trang đầu tiên
+        showPage(1);
+
+        // Xử lý sự kiện khi click vào nút phân trang
+        $("#pagination li a").click(function () {
+            var page = $(this).text();
+            showPage(page);
+        });
+
+        // Hiển thị các phần tử trên trang được chọn
+        function showPage(page) {
+            $(".tbody tr").hide();
+            var start = (page - 1) * pageSize;
+            var end = start + pageSize;
+            $(".tbody tr").slice(start, end).show();
+        }
+    });
+
+</script>

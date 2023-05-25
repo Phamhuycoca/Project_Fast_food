@@ -1,0 +1,225 @@
+﻿@{
+    ViewData["Title"] = "DonHang";
+    Layout = "~/Views/Shared/_FastFood_LayoutNoFooter.cshtml";
+    var items = ViewBag.items as List<Fast_food.Models.ViewModel.DonHangItem>;
+    int stt = 1;
+}
+<div style="height:100px"></div>
+<table style="color:black" class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Người đặt</th>
+            <th scope="col">Địa chỉ</th>
+            <th scope="col">Số điện thoại</th>
+            <th scope="col">Ngày đặt</th>
+            <th scope="col">Tổng tiền</th>
+            <th scope="col">Hình thức</th>
+            <th scope="col">Trạng thái</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var i in Model)
+        {
+            <tr>
+                <td>@stt</td>
+                <th scope="row">@i.HoTen</th>
+                <td>@i.DiaChi</td>
+                <td>@i.Sdt</td>
+                <td>@i.NgayTao.ToString("dd/MM/yyyy")</td>
+                <td>@i.TongTien</td>
+                @if (i.HinhThuc == true)
+                {
+                    <td>Thanh toán sau khi nhận hàng</td>
+                }
+                else
+                {
+                    <td>Đã thanh toán</td>
+                }
+                @if (i.TrangThai == null)
+                {
+                    <td style="color:red;cursor:pointer;">Chưa duyệt đơn hàng</td>
+                }
+                else if (i.TrangThai == false)
+                {
+                    <td style="color:orangered; cursor:pointer;" href="#" onclick="UpdateData(@i.IdDh);">Đang giao</td>
+                }
+                else
+                {
+                    <td style="color:green;cursor:pointer;">Đã nhận hàng</td>
+                }
+                <td>
+                    @if (i.TrangThai == null)
+                    {
+                        <strong style="cursor: pointer;color:red;" onclick="if(confirm('Bạn có muốn hủy đơn hàng?')) { deleteData(@i.IdDh); return true; } else { return false; }">Hủy đơn hàng</strong>
+                    }
+                    <strong style="cursor: pointer;" data-toggle="modal" data-target="#DonHang" onclick="getProductList(@i.IdDh)">Xem chi tiết</strong>
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+<div class="row" data-aos="fade-up">
+    <div class="col-md-12 text-center">
+        <div class="site-block-27">
+            <ul id="pagination" class="pagination"></ul>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="DonHang" tabindex="5000" role="dialog" aria-labelledby="Add-SanPham-Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="Add-SanPham-Label">Chi tiết đơn hàng</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div style="height:100px"></div>
+                <table style="color:black" class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Tên sản phẩm</th>
+                            <th scope="col">Hình ảnh</th>
+                            <th scope="col">Size</th>
+                            <th scope="col">Số lượng</th>
+                            <th scope="col">Đơn giá</th>
+                            <th scope="col">Tổng tiền</th>
+                        </tr>
+                    </thead>
+                    <tbody id="product-list">
+                    </tbody>
+                </table>
+
+                <div class="modal-footer">
+                    @*<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>*@
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
+    function refreshPage() {
+        location.reload();
+    }
+    function UpdateData(id) {
+        // Lấy dữ liệu cần sửa đổi từ cơ sở dữ liệu bằng Ajax
+        $.ajax({
+            url: '/KhachHang/GetData/' + id,
+            type: 'POST',
+            contentType: 'application/json;charset=UTF-8',
+            dataType: 'json',
+            success: function (data) {
+                // Điền dữ liệu vào biểu mẫu
+                refreshPage();
+            }
+        });
+    }
+    function getProductList(productId) {
+        $.ajax({
+            type: "GET",
+            url: "/KhachHang/GetProductList/" + productId,
+            contentType: 'application/json;charset=UTF-8',
+            dataType: 'json',
+            success: function (data) {
+                $("#product-list").empty();
+
+                $.each(data, function (index, product) {
+                    var productHtml = '<tr>';
+                    productHtml += '<td>' + product.tenSp + '</td>';
+                    productHtml += '<td><img style="height:40px;width:40px;" src="/SanPham/' + product.hinhAnh + '" alt=""></td>';
+                    if (product.size == 1) {
+                        productHtml += '<td>Nhỏ</td>';
+                    } else if (product.size == 2) {
+                        productHtml += '<td>Vừa</td>';
+                    } else {
+                        productHtml += '<td>Lớn</td>';
+                    }
+                    productHtml += '<td>' + product.soLuong + '</td>';
+                    productHtml += '<td>' + product.donGia + '</td>';
+                    productHtml += '<td>' + product.tongTien + '</td>';
+                    productHtml += '</tr>';
+
+                    $("#product-list").append(productHtml);
+                });
+                $("#DonHang").modal("show");
+            },
+            error: function () {
+                alert("Không thể lấy danh sách sản phẩm.");
+            }
+        });
+    }
+    function deleteData(id) {
+        // Lấy dữ liệu cần sửa đổi từ cơ sở dữ liệu bằng Ajax
+        $.ajax({
+            url: '/KhachHang/DeleteData/' + id,
+            type: 'POST',
+            contentType: 'application/json;charset=UTF-8',
+            dataType: 'json',
+            success: function () {
+                alert('Hủy thành công đơn hàng');
+                refreshPage();
+            }
+        });
+    }
+</script>
+<script>
+    // Tính tổng số trang
+    var totalRecords = @ViewBag.Count; // Số lượng bản ghi
+    var recordsPerPage = 10; // Số bản ghi trên mỗi trang
+    var totalPages = Math.ceil(totalRecords / recordsPerPage);
+
+    // Thêm các nút phân trang vào danh sách
+    var pagination = document.getElementById("pagination");
+    for (var i = 1; i <= totalPages; i++) {
+        var li = document.createElement("li");
+        li.classList.add("page-item");
+        var a = document.createElement("a");
+        a.classList.add("page-link");
+        a.href = "#";
+        a.innerText = i;
+        li.appendChild(a);
+        pagination.appendChild(li);
+    }
+
+    // Làm cho nút trang hiện tại được chọn
+    var currentPage = 1;
+    var pages = pagination.getElementsByClassName("page-link");
+    pages[0].classList.add("active");
+    for (var i = 0; i < pages.length; i++) {
+        pages[i].addEventListener("click", function () {
+            var prevPage = currentPage;
+            currentPage = parseInt(this.innerText);
+            if (prevPage != currentPage) {
+                var prevActive = document.getElementsByClassName("active");
+                prevActive[0].classList.remove("active");
+                this.classList.add("active");
+                // Tải các bản ghi cho trang mới
+                loadData(currentPage);
+            }
+        });
+    }
+
+    // Hàm tải dữ liệu cho trang mới
+    function loadData(page) {
+        $.ajax({
+            url: '/KhachHang/LoadData',
+            type: 'GET',
+            dataType: 'json',
+            data: { page: page },
+            success: function (data) {
+                // Cập nhật bảng dữ liệu
+            },
+            error: function (xhr, status, error) {
+                // Xử lý lỗi
+            }
+        });
+    }
+
+    // Khởi tạo dữ liệu ban đầu
+    loadData(currentPage);
+</script>

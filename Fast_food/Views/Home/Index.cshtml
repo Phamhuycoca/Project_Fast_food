@@ -1,0 +1,137 @@
+﻿@model IList<Fast_food.Models.SanPham>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_FastFood_Layout.cshtml";
+}
+<div class="site-blocks-cover" style="background-image: url(/fastfood_web/images/food.jpg); width: auto;" data-aos="fade">
+    <div class="container">
+        <div class="row align-items-start align-items-md-center justify-content-end">
+            <div class="col-md-5 text-center text-md-left pt-5 pt-md-0">
+                <h1 class="mb-2">Fast-Food xin chào quý khách</h1>
+                <div class="intro-text text-center text-md-left">
+                    <a href="#" class="btn btn-sm btn-primary">Mua ngay</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="site-section site-blocks-2">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-md-6 col-lg-4 mb-4 mb-lg-0" data-aos="fade" data-aos-delay="">
+                <a class="block-2-item" href="#">
+                    <figure class="image">
+                        <img src="~/fastfood_web/images/bgr1.jpg" style="width: 300px;height: 300px;" alt="" class="img-fluid">
+                    </figure>
+                    <div class="text">
+                        <span class="text-uppercase">Collections</span>
+                        <h3>Đồ ăn</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="100">
+                <a class="block-2-item" href="#">
+                    <figure class="image">
+                        <img src="~/fastfood_web/images/bgr2.jpg" alt="" class="img-fluid">
+                    </figure>
+                    <div class="text">
+                        <span class="text-uppercase">Collections</span>
+                        <h3>Đồ uống</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="200">
+                <a class="block-2-item" href="#">
+                    <figure class="image">
+                        <img src="~/fastfood_web/images/bgr3.jpg" alt="" class="img-fluid">
+                    </figure>
+                    <div class="text">
+                        <span class="text-uppercase">Collections</span>
+                        <h3>Đồ lạnh</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="site-section block-3 site-blocks-2 bg-light">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-7 site-section-heading text-center pt-4">
+                <h2>Featured Products</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="nonloop-block-3 owl-carousel">
+                    @foreach(var i in Model)
+                    {
+                        <div class="item">
+                            <div class="block-4 text-center">
+                                <figure class="block-4-image">
+                                    <img src="@("/SanPham/" +i.HinhAnh)" alt="Image placeholder" class="img-fluid">
+                                </figure>
+                                <div class="block-4-text p-4">
+                                    <h3><a href="~/Home/Single/@i.IdSp">@i.TenSp</a></h3>
+                                    <p class="mb-0" data-product-id="@i.IdLoai"></p>
+                                    <p class="text-primary font-weight-bold"><span>Giá bán: </span>@i.Gia</p>
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="site-section block-8">
+    <div class="container">
+        <div class="row justify-content-center  mb-5">
+            <div class="col-md-7 site-section-heading text-center pt-4">
+                <h2>Big Sale!</h2>
+            </div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-md-12 col-lg-7 mb-5">
+                <a href="#"><img src="~/fastfood_web/images/bgr4.jpg" alt="Image placeholder" class="img-fluid rounded"></a>
+            </div>
+            <div class="col-md-12 col-lg-5 text-center pl-md-5">
+                <h2><a href="#">50% less in all items</a></h2>
+                <p class="post-meta mb-4">By <a href="#">Carl Smith</a> <span class="block-8-sep">&bullet;</span> September 3, 2018</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam iste dolor accusantium facere corporis ipsum animi deleniti fugiat. Ex, veniam?</p>
+                <p><a href="#" class="btn btn-primary btn-sm">Shop Now</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        var productIds = [];
+        // Lấy danh sách ID sản phẩm từ các phần tử TD
+        $('p[data-product-id]').each(function () {
+            var id = $(this).data('product-id');
+            productIds.push(id);
+        });
+
+        // Lấy danh sách tên sản phẩm dựa trên danh sách ID sản phẩm
+        $.ajax({
+            type: "POST",
+            url: "/Home/GetProductNames",
+            data: { productIds: productIds },
+            success: function (result) {
+                $('p[data-product-id]').each(function () {
+                    var id = $(this).data('product-id');
+                    var productName = result[id];
+                    $(this).text(productName);
+                });
+            },
+            error: function (xhr) {
+                console.log(xhr.responseText);
+            }
+        });
+    });
+</script>

@@ -1,0 +1,64 @@
+﻿
+@{
+    ViewData["Title"] = "DangKy";
+    Layout = "~/Views/Shared/_FastFood_Layout.cshtml";
+}
+<div class="site-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+            </div>
+            <div class="col-md-7">
+
+                <h2 class="h3 mb-3 text-black">Đăng ký</h2>
+                <form action="#" method="post">
+
+                    <div class="p-3 p-lg-5 border">
+                        <div class="form-group row">
+                            <div class="col-md-8">
+                                <label class="text-black">Tên đăng nhập<span class="text-danger">*</span></label>
+                                <input type="text" name="UseName" id="UseName" class="form-control" placeholder="Nhập tên đăng nhập">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-8">
+                                <label class="text-black">Mật khẩu<span class="text-danger">*</span></label>
+                                <input type="password" id="Pass" name="Pass" class="form-control" placeholder="Nhập mật khẩu">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-8">
+                                <label class="text-black">Nhập lại mật khẩu<span class="text-danger">*</span></label>
+                                <input type="password" name="Pass1" class="form-control" placeholder="Nhập mật khẩu">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-lg-4">
+                                <input type="submit" class="btn btn-primary btn-lg btn-block" value="Đăng ký">
+                            </div>
+                            <span class="signup">
+                                Nếu bạn có tài khoản vui lòng?
+                                <a href="~/Home/DangNhap">
+                                    <p>Đăng nhập</p>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+@if (TempData["Error"] != null || TempData["Sucsses"] != null)
+{
+    @Html.Raw(TempData["Error"])
+    ;
+    @Html.Raw(TempData["Sucsses"])
+    ;
+}
+<script>
+    if (document.getElementById("UseName").value == "" || document.getElementById("Pass").value == "" || document.getElementById("Pass1").value == "") {
+        alert("Vui lòng điền đầy đủ thông tin!");
+        return false;
+    }
+</script>

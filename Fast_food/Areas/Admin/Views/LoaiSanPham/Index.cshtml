@@ -1,0 +1,299 @@
+﻿@model IList<Fast_food.Models.LoaiSanPham>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+<style>
+    .btn-create {
+        padding-top: 10px;
+        padding-left: 30px;
+    }
+</style>
+<div class="btn-create">
+    <button type="button" class="btn btn-primary mb-1" data-toggle="modal" data-target="#Add-LoaiSanPham">
+        Thêm mới
+    </button>
+</div>
+<div class="content">
+    <div class="animated fadeIn">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        <strong class="card-title">Danh sách loại sản phẩm</strong>
+                    </div>
+                    <div class="card-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Tên loại</th>
+                                    <th scope="col">Mô tả</th>
+                                    <th scope="col">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody class="tbody">
+                                @foreach(var i in Model)
+                                {
+                                    <tr>
+                                        <th scope="row">@i.IdLoai</th>
+                                        <td>@i.TenLoai</td>
+                                        <td>@i.MoTa</td>
+                                        <td>
+                                            <a href="#" onclick="return editData(@i.IdLoai)" data-toggle="modal" data-target="#Edit-LoaiSanPham"><i class="fa fa-edit"></i></a> |
+                                            <a href="#" onclick="if(confirm('Ban co muon xoa ?')) { deleteData(@i.IdLoai); return true; } else { return false; }"><i class="fa fa-trash-o"></i> </a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="card-footer">
+                        <ul class="pagination justify-content-center" id="pagination"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@*Modal *@
+<div class="modal fade" id="Add-LoaiSanPham" tabindex="-1" role="dialog" aria-labelledby="LoaiSanPham-modal-label" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="LoaiSanPham-modal-label">Thêm thông tin</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="add-product-form" action="~/Admin/LoaiSanPham/Create" method="post">
+                    <div class="form-group">
+                        <label>Tên loại sản phẩm</label>
+                        <input type="text" class="form-control" id="TenLoai" name="TenLoai">
+                    </div>
+                    <div class="form-group">
+                        <label>Mô tả</label>
+                        <input type="text" class="form-control" id="MoTa" name="MoTa">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Lưu</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
+            </div>
+        </div>
+    </div>
+</div>
+@*Modal Sua*@
+<div class="modal fade" id="Edit-LoaiSanPham" tabindex="-1" role="dialog" aria-labelledby="Edit-LoaiSanPham-modal-label" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="Edit-LoaiSanPham-modal-label">Sua thông tin</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="editForm" action="~/Admin/LoaiSanPham/Edit" method="post">
+                    <div class="form-group">
+                        <label>Tên loại sản phẩm</label>
+                        <input type="text" class="form-control" hidden id="idloai" name="IdLoai">
+                        <input type="text" class="form-control" id="tenloai">
+                    </div>
+                    <div class="form-group">
+                        <label>Mô tả</label>
+                        <input type="text" class="form-control" id="mota">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
+                <button type="button" class="btn btn-primary" onclick="saveData();">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@if (TempData["Message"] != null)
+{
+    @Html.Raw(TempData["Message"]);
+}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+@*<script>
+
+    //Load danh sách
+    $(document).ready(function () {
+        loadData();
+    });
+    function loadData() {
+        $.ajax({
+            url: "@Url.Action("GetLoaiSanPham", "LoaiSanPham", new { area = "Admin" })",
+            type: "GET",
+            contentType: "application/json;charset=utf-8",
+            dataType: "json",
+            success: function (result) {
+                var html = '';
+                $.each(result, function (key, item) {
+                    html += '<tr>';
+                    html += '<td>' + item.idLoai + '</td>';
+                    html += '<td>' + item.tenLoai + '</td>';
+                    html += '<td>' + item.moTa + '</td>';
+                    html += '<td><a href="#" onclick="return getbyID(' + item.idLoai + ')"><i class="fa fa-eye"></i></a> | <a href="#" onclick="Delele(' + item.idLoai + ')"><i class="fa fa-trash-o"></i> </a></td>';
+                    html += '</tr>';
+                });
+                $('.tbody').html(html);
+            },
+            error: function (errormessage) {
+                alert(errormessage.responseText);
+            }
+        });
+    }
+    //Thêm dữ liệu
+    $(function () {
+        $('#add-product-form').submit(function (e) {
+            e.preventDefault();
+            $.ajax({
+                url: '@Url.Action("Create", "LoaiSanPham", new { area = "Admin" })',
+                type: 'POST',
+                data: $(this).serialize(),
+                success: function (result) {
+                    if (result.success) {
+                        alert('Thêm sản phẩm thành công!');
+                        $('#Add-LoaiSanPham').modal('hide');
+                    } else {
+                        alert('Có lỗi xảy ra khi thêm sản phẩm: ' + result.errors.join('; '));
+                    }
+                },
+                error: function () {
+                    alert('Có lỗi xảy ra khi thực hiện thao tác!');
+                }
+            });
+        });
+    });
+    //Lấy dữ liệu
+    function getbyID(ID) {
+        $('#TenLoai').css('border-color', 'lightgrey');
+        $('#MoTa').css('border-color', 'lightgrey');
+        $.ajax({
+            url: "/Admin/LoaiSanPham/getbyID/" + ID,
+            typr: "GET",
+            contentType: "application/json;charset=UTF-8",
+            dataType: "json",
+            success: function (result) {
+                $('#IdLoai').val(result.idLoai);
+                $('#TenLoai').val(result.tenLoai);
+                $('#MoTa').val(result.moTa);
+
+                $('#Add-LoaiSanPham').modal('show');
+                $('#btnUpdate').show();
+                $('#btnAdd').hide();
+            },
+            error: function (errormessage) {
+                alert(errormessage.responseText);
+            }
+        });
+        return false;
+    }
+</script>
+*@
+<script>
+    function refreshPage() {
+        location.reload();
+    }
+    function editData(id) {
+        // Lấy dữ liệu cần sửa đổi từ cơ sở dữ liệu bằng Ajax
+        $.ajax({
+            url: '/Admin/LoaiSanPham/GetData/' + id,
+            type: 'GET',
+            contentType: 'application/json;charset=UTF-8',
+            dataType: 'json',
+            success: function (data) {
+                // Điền dữ liệu vào biểu mẫu
+                $('#idloai').val(data.idLoai);
+                $('#tenloai').val(data.tenLoai);
+                $('#mota').val(data.moTa);
+                // Hiển thị Modal
+                $('#Edit-LoaiSanPham').modal('show');
+            }
+        });
+    }
+    function deleteData(id) {
+        // Lấy dữ liệu cần sửa đổi từ cơ sở dữ liệu bằng Ajax
+        $.ajax({
+            url: '/Admin/LoaiSanPham/DeleteData/' + id,
+            type: 'POST',
+            contentType: 'application/json;charset=UTF-8',
+            dataType: 'json',
+            success: function () {
+                alert('Xoa thanh cong');
+                refreshPage();
+            }
+        });
+    }
+    function saveData() {
+
+        // Lấy dữ liệu từ biểu mẫu
+        var idloai = $('#idloai').val();
+        var tenloai = $('#tenloai').val();
+        var mota = $('#mota').val();
+        var data = { IdLoai:idloai,TenLoai: tenloai, MoTa: mota};
+        // Gửi yêu cầu sửa đổi đến Action của Controller bằng Ajax
+        $.ajax({
+            url: '/Admin/LoaiSanPham/EditData',
+            type: 'POST',
+            contentType: 'application/json;charset=UTF-8',
+            dataType: 'json',
+            data: JSON.stringify(data),
+            success: function (result) {
+                // Nếu sửa đổi thành công, cập nhật dữ liệu trên trang web
+                if (result.success) {
+                    // Ẩn Modal
+                    alert('Chỉnh sửa thành công');
+                    refreshPage();
+                    $('#Edit-LoaiSanPham').modal('hide');
+                }
+                // Nếu sửa đổi không thành công, hiển thị thông báo lỗi
+                else {
+                    alert(result.message);
+                }
+            }
+        });
+    }
+    $(document).ready(function () {
+        // Số phần tử trên mỗi trang
+        var pageSize = 8;
+
+        // Tổng số phần tử
+        var count = $(".tbody tr").length;
+
+        // Tính số trang
+        var pageCount = Math.ceil(count / pageSize);
+
+        // Thêm các nút phân trang vào phần footer của bảng
+        for (var i = 1; i <= pageCount; i++) {
+            $("#pagination").append('<li class="page-item"><a class="page-link" href="#">' + i + '</a></li>');
+        }
+
+        // Mặc định hiển thị trang đầu tiên
+        showPage(1);
+
+        // Xử lý sự kiện khi click vào nút phân trang
+        $("#pagination li a").click(function () {
+            var page = $(this).text();
+            showPage(page);
+        });
+
+        // Hiển thị các phần tử trên trang được chọn
+        function showPage(page) {
+            $(".tbody tr").hide();
+            var start = (page - 1) * pageSize;
+            var end = start + pageSize;
+            $(".tbody tr").slice(start, end).show();
+        }
+    });
+
+</script>

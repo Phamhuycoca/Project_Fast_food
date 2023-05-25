@@ -1,0 +1,1149 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Fast_food.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Fast_food.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\Admin\\assets\\css\\cs-skin-elastic.css",
+      "PackagePath": "staticwebassets\\Admin\\assets\\css\\cs-skin-elastic.css"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\Admin\\assets\\css\\lib\\chosen\\chosen-sprite.png",
+      "PackagePath": "staticwebassets\\Admin\\assets\\css\\lib\\chosen\\chosen-sprite.png"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\Admin\\assets\\css\\lib\\chosen\\chosen-sprite@2x.png",
+      "PackagePath": "staticwebassets\\Admin\\assets\\css\\lib\\chosen\\chosen-sprite@2x.png"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\Admin\\assets\\css\\lib\\chosen\\chosen.css",
+      "PackagePath": "staticwebassets\\Admin\\assets\\css\\lib\\chosen\\chosen.css"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\Admin\\assets\\css\\lib\\chosen\\chosen.min.css",
+      "PackagePath": "staticwebassets\\Admin\\assets\\css\\lib\\chosen\\chosen.min.css"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\Admin\\assets\\css\\lib\\datatable\\buttons.bootstrap.min.css",
+      "PackagePath": "staticwebassets\\Admin\\assets\\css\\lib\\datatable\\buttons.bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\Admin\\assets\\css\\lib\\datatable\\buttons.dataTables.min.css",
+      "PackagePath": "staticwebassets\\Admin\\assets\\css\\lib\\datatable\\buttons.dataTables.min.css"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\Admin\\assets\\css\\lib\\datatable\\dataTables.bootstrap.min.css",
+      "PackagePath": "staticwebassets\\Admin\\assets\\css\\lib\\datatable\\dataTables.bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\Admin\\assets\\css\\lib\\vector-map\\jqvmap.min.css",
+      "PackagePath": "staticwebassets\\Admin\\assets\\css\\lib\\vector-map\\jqvmap.min.css"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\Admin\\assets\\css\\style.css",
+      "PackagePath": "staticwebassets\\Admin\\assets\\css\\style.css"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\Admin\\assets\\css\\style.css.map",
+      "PackagePath": "staticwebassets\\Admin\\assets\\css\\style.css.map"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\Admin\\assets\\fonts\\icomoon\\icomoon.eot",
+      "PackagePath": "staticwebassets\\Admin\\assets\\fonts\\icomoon\\icomoon.eot"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\Admin\\assets\\fonts\\icomoon\\icomoon.svg",
+      "PackagePath": "staticwebassets\\Admin\\assets\\fonts\\icomoon\\icomoon.svg"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\Admin\\assets\\fonts\\icomoon\\icomoon.ttf",
+      "PackagePath": "staticwebassets\\Admin\\assets\\fonts\\icomoon\\icomoon.ttf"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\Admin\\assets\\fonts\\icomoon\\icomoon.woff",
+      "PackagePath": "staticwebassets\\Admin\\assets\\fonts\\icomoon\\icomoon.woff"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\Admin\\assets\\fonts\\icomoon\\index.html",
+      "PackagePath": "staticwebassets\\Admin\\assets\\fonts\\icomoon\\index.html"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\Admin\\assets\\js\\dashboard.js",
+      "PackagePath": "staticwebassets\\Admin\\assets\\js\\dashboard.js"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\Admin\\assets\\js\\init\\chartjs-init.js",
+      "PackagePath": "staticwebassets\\Admin\\assets\\js\\init\\chartjs-init.js"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\Admin\\assets\\js\\init\\datatables-init.js",
+      "PackagePath": "staticwebassets\\Admin\\assets\\js\\init\\datatables-init.js"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\Admin\\assets\\js\\init\\flot-chart-init.js",
+      "PackagePath": "staticwebassets\\Admin\\assets\\js\\init\\flot-chart-init.js"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\Admin\\assets\\js\\init\\fullcalendar-init.js",
+      "PackagePath": "staticwebassets\\Admin\\assets\\js\\init\\fullcalendar-init.js"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\Admin\\assets\\js\\init\\gmap-init.js",
+      "PackagePath": "staticwebassets\\Admin\\assets\\js\\init\\gmap-init.js"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\Admin\\assets\\js\\init\\peitychart-init.js",
+      "PackagePath": "staticwebassets\\Admin\\assets\\js\\init\\peitychart-init.js"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\Admin\\assets\\js\\init\\vector-init.js",
+      "PackagePath": "staticwebassets\\Admin\\assets\\js\\init\\vector-init.js"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\Admin\\assets\\js\\init\\weather-init.js",
+      "PackagePath": "staticwebassets\\Admin\\assets\\js\\init\\weather-init.js"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\Admin\\assets\\js\\lib\\chosen\\chosen.jquery.js",
+      "PackagePath": "staticwebassets\\Admin\\assets\\js\\lib\\chosen\\chosen.jquery.js"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\Admin\\assets\\js\\lib\\chosen\\chosen.jquery.min.js",
+      "PackagePath": "staticwebassets\\Admin\\assets\\js\\lib\\chosen\\chosen.jquery.min.js"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\Admin\\assets\\js\\lib\\chosen\\chosen.proto.js",
+      "PackagePath": "staticwebassets\\Admin\\assets\\js\\lib\\chosen\\chosen.proto.js"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\Admin\\assets\\js\\lib\\chosen\\chosen.proto.min.js",
+      "PackagePath": "staticwebassets\\Admin\\assets\\js\\lib\\chosen\\chosen.proto.min.js"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\Admin\\assets\\js\\lib\\data-table\\buttons.bootstrap.min.js",
+      "PackagePath": "staticwebassets\\Admin\\assets\\js\\lib\\data-table\\buttons.bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\Admin\\assets\\js\\lib\\data-table\\buttons.colVis.min.js",
+      "PackagePath": "staticwebassets\\Admin\\assets\\js\\lib\\data-table\\buttons.colVis.min.js"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\Admin\\assets\\js\\lib\\data-table\\buttons.flash.min.js",
+      "PackagePath": "staticwebassets\\Admin\\assets\\js\\lib\\data-table\\buttons.flash.min.js"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\Admin\\assets\\js\\lib\\data-table\\buttons.html5.min.js",
+      "PackagePath": "staticwebassets\\Admin\\assets\\js\\lib\\data-table\\buttons.html5.min.js"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\Admin\\assets\\js\\lib\\data-table\\buttons.print.min.js",
+      "PackagePath": "staticwebassets\\Admin\\assets\\js\\lib\\data-table\\buttons.print.min.js"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\Admin\\assets\\js\\lib\\data-table\\dataTables.bootstrap.min.js",
+      "PackagePath": "staticwebassets\\Admin\\assets\\js\\lib\\data-table\\dataTables.bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\Admin\\assets\\js\\lib\\data-table\\dataTables.buttons.min.js",
+      "PackagePath": "staticwebassets\\Admin\\assets\\js\\lib\\data-table\\dataTables.buttons.min.js"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\Admin\\assets\\js\\lib\\data-table\\datatables.min.js",
+      "PackagePath": "staticwebassets\\Admin\\assets\\js\\lib\\data-table\\datatables.min.js"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\Admin\\assets\\js\\lib\\data-table\\jquery-1.12.4.js",
+      "PackagePath": "staticwebassets\\Admin\\assets\\js\\lib\\data-table\\jquery-1.12.4.js"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\Admin\\assets\\js\\lib\\data-table\\jquery.dataTables.min.js",
+      "PackagePath": "staticwebassets\\Admin\\assets\\js\\lib\\data-table\\jquery.dataTables.min.js"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\Admin\\assets\\js\\lib\\data-table\\jszip.min.js",
+      "PackagePath": "staticwebassets\\Admin\\assets\\js\\lib\\data-table\\jszip.min.js"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\Admin\\assets\\js\\lib\\data-table\\pdfmake.min.js",
+      "PackagePath": "staticwebassets\\Admin\\assets\\js\\lib\\data-table\\pdfmake.min.js"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\Admin\\assets\\js\\lib\\data-table\\vfs_fonts.js",
+      "PackagePath": "staticwebassets\\Admin\\assets\\js\\lib\\data-table\\vfs_fonts.js"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\Admin\\assets\\js\\lib\\gmap\\gmapApi.js",
+      "PackagePath": "staticwebassets\\Admin\\assets\\js\\lib\\gmap\\gmapApi.js"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\Admin\\assets\\js\\lib\\gmap\\gmaps.js",
+      "PackagePath": "staticwebassets\\Admin\\assets\\js\\lib\\gmap\\gmaps.js"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\Admin\\assets\\js\\lib\\gmap\\gmaps.min.js",
+      "PackagePath": "staticwebassets\\Admin\\assets\\js\\lib\\gmap\\gmaps.min.js"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\Admin\\assets\\js\\main.js",
+      "PackagePath": "staticwebassets\\Admin\\assets\\js\\main.js"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\Admin\\assets\\js\\vmap.sampledata.js",
+      "PackagePath": "staticwebassets\\Admin\\assets\\js\\vmap.sampledata.js"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\Admin\\assets\\js\\widgets.js",
+      "PackagePath": "staticwebassets\\Admin\\assets\\js\\widgets.js"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\Admin\\assets\\scss\\style.css",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\style.css"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\Admin\\assets\\scss\\style.css.map",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\style.css.map"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\Admin\\assets\\scss\\style.scss",
+      "PackagePath": "staticwebassets\\Admin\\assets\\scss\\style.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\Admin\\images\\.gitignore",
+      "PackagePath": "staticwebassets\\Admin\\images\\.gitignore"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\Admin\\images\\admin.jpg",
+      "PackagePath": "staticwebassets\\Admin\\images\\admin.jpg"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\Admin\\images\\avatar\\1.jpg",
+      "PackagePath": "staticwebassets\\Admin\\images\\avatar\\1.jpg"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\Admin\\images\\avatar\\2.jpg",
+      "PackagePath": "staticwebassets\\Admin\\images\\avatar\\2.jpg"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\Admin\\images\\avatar\\3.jpg",
+      "PackagePath": "staticwebassets\\Admin\\images\\avatar\\3.jpg"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\Admin\\images\\avatar\\4.jpg",
+      "PackagePath": "staticwebassets\\Admin\\images\\avatar\\4.jpg"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\Admin\\images\\avatar\\5.jpg",
+      "PackagePath": "staticwebassets\\Admin\\images\\avatar\\5.jpg"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\Admin\\images\\avatar\\6.jpg",
+      "PackagePath": "staticwebassets\\Admin\\images\\avatar\\6.jpg"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\Admin\\images\\avatar\\64-1.jpg",
+      "PackagePath": "staticwebassets\\Admin\\images\\avatar\\64-1.jpg"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\Admin\\images\\avatar\\64-2.jpg",
+      "PackagePath": "staticwebassets\\Admin\\images\\avatar\\64-2.jpg"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\Admin\\images\\favicon.png",
+      "PackagePath": "staticwebassets\\Admin\\images\\favicon.png"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\Admin\\images\\logo.png",
+      "PackagePath": "staticwebassets\\Admin\\images\\logo.png"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\Admin\\images\\logo1.png",
+      "PackagePath": "staticwebassets\\Admin\\images\\logo1.png"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\Admin\\images\\logo2.png",
+      "PackagePath": "staticwebassets\\Admin\\images\\logo2.png"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\Admin\\images\\logoa.png",
+      "PackagePath": "staticwebassets\\Admin\\images\\logoa.png"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\Admin\\images\\logoaa.png",
+      "PackagePath": "staticwebassets\\Admin\\images\\logoaa.png"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\Admin\\images\\logofastfood.jpg",
+      "PackagePath": "staticwebassets\\Admin\\images\\logofastfood.jpg"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\css\\aos.css",
+      "PackagePath": "staticwebassets\\FastFood_Web\\css\\aos.css"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\FastFood_Web\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\css\\bootstrap\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\FastFood_Web\\css\\bootstrap\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\css\\bootstrap\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\FastFood_Web\\css\\bootstrap\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\css\\jquery-ui.css",
+      "PackagePath": "staticwebassets\\FastFood_Web\\css\\jquery-ui.css"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\css\\magnific-popup.css",
+      "PackagePath": "staticwebassets\\FastFood_Web\\css\\magnific-popup.css"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\css\\owl.carousel.min.css",
+      "PackagePath": "staticwebassets\\FastFood_Web\\css\\owl.carousel.min.css"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\css\\owl.theme.default.min.css",
+      "PackagePath": "staticwebassets\\FastFood_Web\\css\\owl.theme.default.min.css"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\css\\style.css",
+      "PackagePath": "staticwebassets\\FastFood_Web\\css\\style.css"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\fonts\\icomoon\\Read Me.txt",
+      "PackagePath": "staticwebassets\\FastFood_Web\\fonts\\icomoon\\Read Me.txt"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\fonts\\icomoon\\demo-files\\demo.css",
+      "PackagePath": "staticwebassets\\FastFood_Web\\fonts\\icomoon\\demo-files\\demo.css"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\fonts\\icomoon\\demo-files\\demo.js",
+      "PackagePath": "staticwebassets\\FastFood_Web\\fonts\\icomoon\\demo-files\\demo.js"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\fonts\\icomoon\\demo.html",
+      "PackagePath": "staticwebassets\\FastFood_Web\\fonts\\icomoon\\demo.html"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\fonts\\icomoon\\fonts\\icomoon.eot",
+      "PackagePath": "staticwebassets\\FastFood_Web\\fonts\\icomoon\\fonts\\icomoon.eot"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\fonts\\icomoon\\fonts\\icomoon.svg",
+      "PackagePath": "staticwebassets\\FastFood_Web\\fonts\\icomoon\\fonts\\icomoon.svg"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\fonts\\icomoon\\fonts\\icomoon.ttf",
+      "PackagePath": "staticwebassets\\FastFood_Web\\fonts\\icomoon\\fonts\\icomoon.ttf"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\fonts\\icomoon\\fonts\\icomoon.woff",
+      "PackagePath": "staticwebassets\\FastFood_Web\\fonts\\icomoon\\fonts\\icomoon.woff"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\fonts\\icomoon\\selection.json",
+      "PackagePath": "staticwebassets\\FastFood_Web\\fonts\\icomoon\\selection.json"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\fonts\\icomoon\\style.css",
+      "PackagePath": "staticwebassets\\FastFood_Web\\fonts\\icomoon\\style.css"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\images\\bgr1.jpg",
+      "PackagePath": "staticwebassets\\FastFood_Web\\images\\bgr1.jpg"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\images\\bgr2.jpg",
+      "PackagePath": "staticwebassets\\FastFood_Web\\images\\bgr2.jpg"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\images\\bgr3.jpg",
+      "PackagePath": "staticwebassets\\FastFood_Web\\images\\bgr3.jpg"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\images\\bgr4.jpg",
+      "PackagePath": "staticwebassets\\FastFood_Web\\images\\bgr4.jpg"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\images\\blog_1.jpg",
+      "PackagePath": "staticwebassets\\FastFood_Web\\images\\blog_1.jpg"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\images\\children.jpg",
+      "PackagePath": "staticwebassets\\FastFood_Web\\images\\children.jpg"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\images\\cloth_1.jpg",
+      "PackagePath": "staticwebassets\\FastFood_Web\\images\\cloth_1.jpg"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\images\\cloth_2.jpg",
+      "PackagePath": "staticwebassets\\FastFood_Web\\images\\cloth_2.jpg"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\images\\cloth_3.jpg",
+      "PackagePath": "staticwebassets\\FastFood_Web\\images\\cloth_3.jpg"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\images\\fast-food.jpg",
+      "PackagePath": "staticwebassets\\FastFood_Web\\images\\fast-food.jpg"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\images\\food.jpg",
+      "PackagePath": "staticwebassets\\FastFood_Web\\images\\food.jpg"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\images\\hero_1.jpg",
+      "PackagePath": "staticwebassets\\FastFood_Web\\images\\hero_1.jpg"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\images\\hero_1.png",
+      "PackagePath": "staticwebassets\\FastFood_Web\\images\\hero_1.png"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\images\\men.jpg",
+      "PackagePath": "staticwebassets\\FastFood_Web\\images\\men.jpg"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\images\\person_1.jpg",
+      "PackagePath": "staticwebassets\\FastFood_Web\\images\\person_1.jpg"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\images\\person_2.jpg",
+      "PackagePath": "staticwebassets\\FastFood_Web\\images\\person_2.jpg"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\images\\person_3.jpg",
+      "PackagePath": "staticwebassets\\FastFood_Web\\images\\person_3.jpg"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\images\\person_4.jpg",
+      "PackagePath": "staticwebassets\\FastFood_Web\\images\\person_4.jpg"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\images\\shoe.png",
+      "PackagePath": "staticwebassets\\FastFood_Web\\images\\shoe.png"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\images\\shoe_1.jpg",
+      "PackagePath": "staticwebassets\\FastFood_Web\\images\\shoe_1.jpg"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\images\\women.jpg",
+      "PackagePath": "staticwebassets\\FastFood_Web\\images\\women.jpg"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\js\\aos.js",
+      "PackagePath": "staticwebassets\\FastFood_Web\\js\\aos.js"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\FastFood_Web\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\js\\jquery-3.3.1.min.js",
+      "PackagePath": "staticwebassets\\FastFood_Web\\js\\jquery-3.3.1.min.js"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\js\\jquery-ui.js",
+      "PackagePath": "staticwebassets\\FastFood_Web\\js\\jquery-ui.js"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\js\\jquery.magnific-popup.min.js",
+      "PackagePath": "staticwebassets\\FastFood_Web\\js\\jquery.magnific-popup.min.js"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\js\\main.js",
+      "PackagePath": "staticwebassets\\FastFood_Web\\js\\main.js"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\js\\owl.carousel.min.js",
+      "PackagePath": "staticwebassets\\FastFood_Web\\js\\owl.carousel.min.js"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\js\\popper.min.js",
+      "PackagePath": "staticwebassets\\FastFood_Web\\js\\popper.min.js"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\js\\slick.min.js",
+      "PackagePath": "staticwebassets\\FastFood_Web\\js\\slick.min.js"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\.DS_Store",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\.DS_Store"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\_site-base.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\_site-base.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\_site-blocks.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\_site-blocks.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\_site-navbar.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\_site-navbar.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\.DS_Store",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\.DS_Store"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\_alert.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\_alert.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\_badge.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\_badge.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\_breadcrumb.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\_breadcrumb.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\_button-group.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\_button-group.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\_buttons.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\_buttons.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\_card.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\_card.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\_carousel.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\_carousel.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\_close.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\_close.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\_code.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\_code.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\_custom-forms.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\_custom-forms.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\_dropdown.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\_dropdown.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\_forms.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\_forms.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\_functions.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\_functions.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\_grid.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\_grid.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\_images.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\_images.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\_input-group.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\_input-group.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\_jumbotron.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\_jumbotron.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\_list-group.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\_list-group.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\_media.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\_media.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\_mixins.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\_mixins.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\_modal.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\_modal.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\_nav.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\_nav.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\_navbar.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\_navbar.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\_pagination.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\_pagination.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\_popover.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\_popover.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\_print.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\_print.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\_progress.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\_progress.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\_reboot.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\_reboot.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\_root.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\_root.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\_tables.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\_tables.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\_tooltip.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\_tooltip.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\_transitions.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\_transitions.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\_type.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\_type.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\_utilities.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\_utilities.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\_variables.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\_variables.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\bootstrap-grid.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\bootstrap-grid.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\bootstrap-reboot.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\bootstrap-reboot.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\bootstrap.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\bootstrap.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\mixins\\_alert.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\mixins\\_alert.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\mixins\\_background-variant.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\mixins\\_background-variant.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\mixins\\_badge.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\mixins\\_badge.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\mixins\\_border-radius.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\mixins\\_border-radius.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\mixins\\_box-shadow.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\mixins\\_box-shadow.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\mixins\\_breakpoints.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\mixins\\_breakpoints.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\mixins\\_buttons.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\mixins\\_buttons.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\mixins\\_caret.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\mixins\\_caret.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\mixins\\_clearfix.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\mixins\\_clearfix.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\mixins\\_float.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\mixins\\_float.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\mixins\\_forms.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\mixins\\_forms.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\mixins\\_gradients.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\mixins\\_gradients.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\mixins\\_grid-framework.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\mixins\\_grid-framework.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\mixins\\_grid.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\mixins\\_grid.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\mixins\\_hover.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\mixins\\_hover.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\mixins\\_image.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\mixins\\_image.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\mixins\\_list-group.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\mixins\\_list-group.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\mixins\\_lists.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\mixins\\_lists.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\mixins\\_nav-divider.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\mixins\\_nav-divider.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\mixins\\_pagination.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\mixins\\_pagination.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\mixins\\_reset-text.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\mixins\\_reset-text.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\mixins\\_resize.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\mixins\\_resize.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\mixins\\_screen-reader.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\mixins\\_screen-reader.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\mixins\\_size.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\mixins\\_size.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\mixins\\_table-row.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\mixins\\_table-row.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\mixins\\_text-emphasis.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\mixins\\_text-emphasis.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\mixins\\_text-hide.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\mixins\\_text-hide.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\mixins\\_text-truncate.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\mixins\\_text-truncate.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\mixins\\_transition.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\mixins\\_transition.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\mixins\\_visibility.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\mixins\\_visibility.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\utilities\\_align.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\utilities\\_align.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\utilities\\_background.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\utilities\\_background.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\utilities\\_borders.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\utilities\\_borders.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\utilities\\_clearfix.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\utilities\\_clearfix.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\utilities\\_display.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\utilities\\_display.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\utilities\\_embed.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\utilities\\_embed.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\utilities\\_flex.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\utilities\\_flex.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\utilities\\_float.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\utilities\\_float.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\utilities\\_position.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\utilities\\_position.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\utilities\\_screenreaders.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\utilities\\_screenreaders.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\utilities\\_shadows.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\utilities\\_shadows.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\utilities\\_sizing.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\utilities\\_sizing.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\utilities\\_spacing.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\utilities\\_spacing.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\utilities\\_text.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\utilities\\_text.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\bootstrap\\utilities\\_visibility.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\bootstrap\\utilities\\_visibility.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\FastFood_Web\\scss\\style.scss",
+      "PackagePath": "staticwebassets\\FastFood_Web\\scss\\style.scss"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\KhachHang\\1004\\aaa.jfif",
+      "PackagePath": "staticwebassets\\KhachHang\\1004\\aaa.jfif"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\KhachHang\\1\\asss.jfif",
+      "PackagePath": "staticwebassets\\KhachHang\\1\\asss.jfif"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\KhachHang\\2\\aaa.jfif",
+      "PackagePath": "staticwebassets\\KhachHang\\2\\aaa.jfif"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\KhachHang\\4\\aaa.jfif",
+      "PackagePath": "staticwebassets\\KhachHang\\4\\aaa.jfif"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\NhanVien\\1002\\aaa.jfif",
+      "PackagePath": "staticwebassets\\NhanVien\\1002\\aaa.jfif"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\NhanVien\\1\\asss.jfif",
+      "PackagePath": "staticwebassets\\NhanVien\\1\\asss.jfif"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\SanPham\\10\\aaa.jfif",
+      "PackagePath": "staticwebassets\\SanPham\\10\\aaa.jfif"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\SanPham\\1\\aaa.jfif",
+      "PackagePath": "staticwebassets\\SanPham\\1\\aaa.jfif"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\SanPham\\3\\asss.jfif",
+      "PackagePath": "staticwebassets\\SanPham\\3\\asss.jfif"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\SanPham\\4\\aaa.jfif",
+      "PackagePath": "staticwebassets\\SanPham\\4\\aaa.jfif"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\SanPham\\5\\asss.jfif",
+      "PackagePath": "staticwebassets\\SanPham\\5\\asss.jfif"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\SanPham\\6\\asss.jfif",
+      "PackagePath": "staticwebassets\\SanPham\\6\\asss.jfif"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\SanPham\\7\\asss.jfif",
+      "PackagePath": "staticwebassets\\SanPham\\7\\asss.jfif"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\SanPham\\8\\aaa.jfif",
+      "PackagePath": "staticwebassets\\SanPham\\8\\aaa.jfif"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\SanPham\\9\\aaa.jfif",
+      "PackagePath": "staticwebassets\\SanPham\\9\\aaa.jfif"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\Fast_food\\Fast_food\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.Fast_food.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.Fast_food.props",
+      "PackagePath": "build\\Fast_food.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.Fast_food.props",
+      "PackagePath": "buildMultiTargeting\\Fast_food.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.Fast_food.props",
+      "PackagePath": "buildTransitive\\Fast_food.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

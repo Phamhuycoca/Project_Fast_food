@@ -1,0 +1,81 @@
+﻿@model IList<Fast_food.Models.ViewModel.GioHangItems>
+@{
+    ViewData["Title"] = "ThanhToan";
+    Layout = "~/Views/Shared/_FastFood_Layout.cshtml";
+    var kh = ViewBag.get as Fast_food.Models.KhachHang;
+}
+<div class="site-section">
+    <form class="container" asp-action="ThanhToan" asp-controller="GioHang" method="post"> 
+        <div class="row">
+            <div class="col-md-6 mb-5 mb-md-0">
+                <h2 class="h3 mb-3 text-black">Đơn hàng</h2>
+                <div class="p-3 p-lg-5 border">
+                    <div class="form-group row">
+                        <div class="col-md-12">
+                            <label class="text-black">Họ tên người nhận</label>
+                            <input type="text" class="form-control" value="@kh.HoTen" name="HoTen">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-12">
+                            <label class="text-black">Địa chỉ<span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" value="@kh.DiaChi" name="DiaChi">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="text-black">Số điện thoại<span class="text-danger">*</span></label>
+                        <input type="tel" class="form-control" value="@kh.Sdt" name="Sdt">
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-md-6">
+                            <label class="text-black">Tổng tiền<span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" value="@ViewBag.tt đ" name="TongTien" readonly>
+                        </div>
+                        <div class="col-md-12">
+                            <label class="text-black">Hình thức thanh toán<span class="text-danger">*</span></label>
+                            <select class="form-control" name="HinhThuc">
+                                <option value="true">Thanh toán sau khi nhận hàng</option>
+                                <option value="false">Chuyển khoản qua ATM</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- CTHD -->
+            <div class="col-md-6">
+                <div class="row mb-5">
+                    <div class="col-md-12">
+                        <h2 class="h3 mb-3 text-black">Hóa </h2>
+                        <div class="p-3 p-lg-5 border">
+                            <table class="table site-block-order-table mb-5">
+                                <thead>
+                                <th>sản phẩm</th>
+                                <th>Số lượng</th>
+                                <th>Tổng tiền</th>
+                                </thead>
+                                <tbody>
+                                    @foreach(var i in Model)
+                                    {
+                                        <tr>
+                                            <td>@i.TenSp</td>
+                                            <td> <strong class="mx-2">x</strong>@i.SoLuong</td>
+                                            <td>@i.Gia</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                            <p class="text-black font-weight-bold"><strong>Số lượng: @ViewBag.sl</strong></p>
+                            <p class="text-black font-weight-bold"><strong>Tổng tiền: @ViewBag.tt đ</strong></p>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary btn-lg py-3 btn-block">Đặt hàng</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- </form> -->
+    </form>
+</div>
+

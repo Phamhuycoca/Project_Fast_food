@@ -1,0 +1,322 @@
+﻿@model Fast_food.Models.TaiKhoan
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    var items = ViewBag.items as List<Fast_food.Models.TaiKhoan>;
+}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+<style>
+    .btn-create {
+        padding-top: 10px;
+        padding-left: 30px;
+    }
+</style>
+<div class="btn-create">
+    <button type="button" class="btn btn-success mb-1" data-toggle="modal" data-target="#Add-NhanVien">
+        Thêm mới nhân viên
+    </button>
+</div>
+<div class="col-lg-12">
+    <div class="card">
+        <div class="card-header">
+            <strong class="card-title">Danh sách nhân viên</strong>
+        </div>
+        <div class="table-stats order-table ov-h">
+            <table class="table ">
+                <thead>
+                    <tr>
+                        <th class="avatar">Ảnh đại diện</th>
+                        <th>Nhân viên</th>
+                        <th>Ngày sinh</th>
+                        <th>Giới tính</th>
+                        <th>Địa chỉ</th>
+                        <th>Số điện thoại</th>
+                        <th>Chức vụ</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var i in items)
+                    {
+                        <tr>
+                            <td class="avatar">
+                                <div class="round-img">
+                                    <img src="@("/NhanVien/"+i.HinhAnh)" alt="">
+                                </div>
+                            </td>
+                            <td> @i.HoTen </td>
+                            <td>
+                                <span>@i.NgaySinh?.ToString("dd/MM/yyyy")</span>
+                            </td>
+                            @if (i.GioiTinh == true)
+                            {
+                                <td>
+                                    <span>Nam</span>
+                                </td>
+                            }
+                            else
+                            {
+                                <td>
+                                    <span>Nữ</span>
+                                </td>
+                            }
+
+                            <td>
+                                <span>@i.DiaChi</span>
+                            </td>
+                            <td>
+                                <span>@i.Sdt</span>
+                            </td>
+                            @if (i.ChucVu == true)
+                            {
+                                <td>
+                                    <span>Quản lý</span>
+                                </td>
+                            }
+                            else
+                            {
+                                <td>
+                                    <span>Nhân viên</span>
+                                </td>
+                            }
+                            <td>
+                                <a href="#" onclick="return loadNhanVien(@i.IdTk)" data-toggle="modal" data-target="#Edit-NhanVien">
+                                    <i class="fa fa-edit"></i>
+                                </a> |
+                                <a href="#" onclick="if(confirm('Ban co muon xoa ?')) { deleteData(@i.IdTk); return true; } else { return false; }">
+                                    <i class="fa fa-trash-o"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    }
+
+                </tbody>
+            </table>
+        </div> <!-- /.table-stats -->
+    </div>
+</div>
+
+@*Modal*@
+<div class="modal fade" id="Add-NhanVien" tabindex="-1" role="dialog" aria-labelledby="Add-NhanVien-Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="Add-NhanVien-Label">Thêm thông tin nhân viên</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="~/Admin/NhanVien/Create" method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="company" class=" form-control-label">Nhân viên</label>
+                        <input type="text" id="HoTen" name="HoTen" placeholder="Nhập thông tin" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Ảnh đại diện</label>
+                        <input type="file" id="imageFile" name="file" class="form-control" onchange="chosseFile(this)"
+                               accept="image/gif, image/jpeg, image/png, image/jpg">
+                        <img src="" id="image" alt="Anh" width="200" height="200">
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-8">
+                            <div class="form-group">
+                                <div class="form-group">
+                                    <label class="form-control-label">Ngày sinh</label>
+                                    <input type="date" id="NgaySinh" name="NgaySinh" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <div class="form-group">
+                                <label for="postal-code" class=" form-control-label">Giới tính</label>
+                                <select name="GioiTinh" id="select" class="form-control">
+                                    <option>Giới tính</option>
+                                    <option value="true">Nam</option>
+                                    <option value="false">Nữ</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <div class="form-group">
+                                <label for="postal-code" class=" form-control-label">Địa chỉ</label>
+                                <input type="text" id="DiaChi" name="DiaChi" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <div class="form-group">
+                                <label for="postal-code" class=" form-control-label">Số điện thoại</label>
+                                <input type="tel" id="Sdt" name="Sdt" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <div class="form-group">
+                                <label for="postal-code" class=" form-control-label">Chức vụ</label>
+                                <select name="ChucVu" id="select" class="form-control">
+                                    <option>Chức vụ</option>
+                                    <option value="true">Quản lý</option>
+                                    <option value="false">Nhân viên</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <label for="postal-code" class=" form-control-label">Thông tin đăng nhập</label>
+                            <div class="form-group">
+                                <label for="postal-code" class=" form-control-label">Tài khoản</label>
+                                <input type="text" id="Sdt" name="UseName" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="postal-code" class=" form-control-label">Mật khẩu</label>
+                                <input type="password" id="Sdt" name="Pass" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <input type="submit" class="btn btn-primary" value="Lưu thông tin" />
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@*Modal sửa*@
+<div class="modal fade" id="Edit-NhanVien" tabindex="-1" role="dialog" aria-labelledby="Edit-NhanVien-Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="Edit-NhanVien-Label">Sửa thông tin nhân viên</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="~/Admin/NhanVien/Edit" method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="company" class=" form-control-label">Nhân viên</label>
+                        <input type="text" id="hoten" name="HoTen" placeholder="Nhập thông tin" class="form-control">
+                        <input type="text" id="idtk" name="IdTk" hidden class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Ảnh đại diện</label>
+                        <input type="file" id="imageFile" name="file" class="form-control" onchange="chosseFile(this)"
+                               accept="image/gif, image/jpeg, image/png, image/jpg">
+                        <img src="" id="hinhanh" alt="Anh" width="200" height="200">
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-8">
+                            <div class="form-group">
+                                <div class="form-group">
+                                    <label class="form-control-label">Ngày sinh</label>
+                                    <input type="datetime" id="ngaysinh" name="NgaySinh" class="form-control">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <div class="form-group">
+                                <label for="postal-code" class=" form-control-label">Giới tính</label>
+                                <select name="GioiTinh" id="GioiTinh" class="form-control">
+                                    <option value="true">Nam</option>
+                                    <option value="false">Nữ</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <div class="form-group">
+                                <label for="postal-code" class=" form-control-label">Địa chỉ</label>
+                                <input type="text" id="diachi" name="DiaChi" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <div class="form-group">
+                                <label for="postal-code" class=" form-control-label">Số điện thoại</label>
+                                <input type="tel" id="sdt" name="Sdt" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <div class="form-group">
+                                <label for="postal-code" class=" form-control-label">Chức vụ</label>
+                                <select name="ChucVu" id="ChucVu" class="form-control">
+                                    <option value="true">Quản lý</option>
+                                    <option value="false">Nhân viên</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="submit" class="btn btn-primary" value="Lưu thông tin" />
+                </form>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function chosseFile(fileInput) {
+        if (fileInput.files && fileInput.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                $('#image').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(fileInput.files[0]);
+        }
+    }
+</script>
+<script>
+    function refreshPage() {
+        location.reload();
+    }
+    function loadNhanVien(id) {
+        $.ajax({
+            url: '/Admin/NhanVien/GetById/' + id,
+            type: 'GET',
+            contentType: 'application/json;charset=UTF-8',
+            dataType: 'json',
+            success: function (data) {
+                $('#hoten').val(data.hoTen);
+                var datetime = new Date(data.ngaySinh);
+                var formattedDate = datetime.toLocaleDateString("en-GB", { day: '2-digit', month: '2-digit', year: 'numeric' });
+                $('#idtk').val(data.idTk);
+                $('#ngaysinh').val(formattedDate);
+                $('#ns').val(formattedDate);
+                //$('#GioiTinh').val(data.gioiTinh);
+                if (data.gioiTinh) {
+                    $('#GioiTinh option[value="true"]').prop('selected', true);
+                } else {
+                    $('#GioiTinh option[value="false"]').prop('selected', true);
+                }
+                $('#diachi').val(data.diaChi);
+                $('#sdt').val(data.sdt);
+                //$('#ChucVu').val(data.chucVu);
+                if (data.chucVu) {
+                    $('#ChucVu option[value="true"]').prop('selected', true);
+                } else {
+                    $('#ChucVu option[value="false"]').prop('selected', true);
+                }
+                $('#hinhanh').attr('src', '/NhanVien/' + data.hinhAnh);
+                // Hiển thị Modal
+                $('#Edit-NhanVien').modal('show');
+            },
+            error: function (xhr) {
+                // handle errors if any
+                console.log(xhr.responseText);
+            }
+        });
+    }
+    function deleteData(id) {
+        // Lấy dữ liệu cần sửa đổi từ cơ sở dữ liệu bằng Ajax
+        $.ajax({
+            url: '/Admin/NhanVien/DeleteData/' + id,
+            type: 'POST',
+            contentType: 'application/json;charset=UTF-8',
+            dataType: 'json',
+            success: function () {
+                alert('Xóa thành công');
+                refreshPage();
+            }
+        });
+    }
+</script>

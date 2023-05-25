@@ -1,0 +1,160 @@
+﻿@{
+    ViewData["Title"] = "DanhMuc";
+    Layout = "~/Views/Shared/_FastFood_Layout.cshtml";
+    var items = ViewBag.items as List<Fast_food.Models.SanPham>;
+}
+<div class="site-section">
+    <div class="container">
+
+        <div class="row mb-5">
+            <div class="col-md-9 order-2">
+                <div class="row">
+                    <div class="col-md-12 mb-5">
+                        <div class="d-flex">
+                            <div class="dropdown mr-1 ml-md-auto">
+                                <button type="button" class="btn btn-secondary btn-sm dropdown-toggle" id="dropdownMenuOffset" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Trạng thái
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
+                                    <a class="dropdown-item" href="#">Men</a>
+                                    <a class="dropdown-item" href="#">Women</a>
+                                    <a class="dropdown-item" href="#">Children</a>
+                                </div>
+                            </div>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-secondary btn-sm dropdown-toggle" id="dropdownMenuReference" data-toggle="dropdown">Sắp xếp</button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuReference">
+                                    <a class="dropdown-item" href="#">Relevance</a>
+                                    <a class="dropdown-item" href="#">Name, A to Z</a>
+                                    <a class="dropdown-item" href="#">Name, Z to A</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Price, low to high</a>
+                                    <a class="dropdown-item" href="#">Price, high to low</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-5">
+
+                    @foreach(var i in Model)
+                    {
+                        <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
+                            <div class="block-4 text-center border">
+                                <figure class="block-4-image">
+                                    <a href="~/GioHang/AddToCart/@i.IdSp"><img src="@("/SanPham/" +i.HinhAnh)" alt="Image placeholder" class="img-fluid"></a>
+                                </figure>
+                                <div class="block-4-text p-4">
+                                    <h3><a href="~/Home/Single/@i.IdSp">@i.TenSp</a></h3>
+                                    <p class="mb-0" data-product-id="@i.IdLoai"></p>
+                                    <p class="text-primary font-weight-bold">Giá bán: <span>@i.Gia đ</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+               @* <div class="row" data-aos="fade-up">
+                    <div class="col-md-12 text-center">
+                        <div class="site-block-27">
+                            <ul id="pagination">
+                                <li><a href="#">&lt;</a></li>
+                                <li class="active"><span>1</span></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#">&gt;</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>*@
+                <div class="row" data-aos="fade-up">
+                    <div class="col-md-12 text-center">
+                        <div class="site-block-27">
+                            <ul id="pagination">
+                               
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 order-1 mb-5 mb-md-0">
+                <div class="border p-4 rounded mb-4">
+                    <h3 class="mb-3 h6 text-uppercase text-black d-block">Danh mục</h3>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-1"><a href="#" class="d-flex"><span>Men</span> <span class="text-black ml-auto">(2,220)</span></a></li>
+                        <li class="mb-1"><a href="#" class="d-flex"><span>Women</span> <span class="text-black ml-auto">(2,550)</span></a></li>
+                        <li class="mb-1"><a href="#" class="d-flex"><span>Children</span> <span class="text-black ml-auto">(2,124)</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        var productIds = [];
+        // Lấy danh sách ID sản phẩm từ các phần tử TD
+        $('p[data-product-id]').each(function () {
+            var id = $(this).data('product-id');
+            productIds.push(id);
+        });
+
+        // Lấy danh sách tên sản phẩm dựa trên danh sách ID sản phẩm
+        $.ajax({
+            type: "POST",
+            url: "/Home/GetProductNames",
+            data: { productIds: productIds },
+            success: function (result) {
+                $('p[data-product-id]').each(function () {
+                    var id = $(this).data('product-id');
+                    var productName = result[id];
+                    $(this).text(productName);
+                });
+            },
+            error: function (xhr) {
+                console.log(xhr.responseText);
+            }
+        });
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        var itemsPerPage = 10;
+        var currentPage = 1;
+        var totalItems = @ViewBag.Count; // Số lượng sản phẩm trong danh sách
+
+        // Tính số trang
+        var totalPages = Math.ceil(totalItems / itemsPerPage);
+
+        // Tạo nút phân trang
+        for (var i = 1; i <= totalPages; i++) {
+            var button = $('<li><a href="#">' + i + '</a></li>');
+            $('#pagination').append(button);
+        }
+
+        // Hiển thị sản phẩm của trang đầu tiên
+        showPage(currentPage);
+
+        // Xử lý sự kiện khi nhấn vào nút phân trang
+        $('#pagination').on('click', 'li', function (e) {
+            e.preventDefault();
+            currentPage = parseInt($(this).text());
+            showPage(currentPage);
+        });
+
+        // Hiển thị sản phẩm của trang hiện tại
+        function showPage(page) {
+            var startIndex = (page - 1) * itemsPerPage;
+            var endIndex = startIndex + itemsPerPage;
+            $('.block-4').hide();
+            $('.block-4').slice(startIndex, endIndex).show();
+            $('#pagination li').removeClass('active');
+            $('#pagination li').eq(currentPage - 1).addClass('active');
+        }
+    });
+</script>
+

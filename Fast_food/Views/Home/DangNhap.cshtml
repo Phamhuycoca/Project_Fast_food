@@ -1,0 +1,58 @@
+﻿
+@{
+    ViewData["Title"] = "DangNhap";
+    Layout = "~/Views/Shared/_FastFood_Layout.cshtml";
+}
+<div class="site-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+            </div>
+            <div class="col-md-7">
+
+                <h2 class="h3 mb-3 text-black">Đăng nhập</h2>
+                <form action="~/Home/DangNhap" method="post">
+
+                    <div class="p-3 p-lg-5 border">
+                        <div class="form-group row">
+                            <div class="col-md-8">
+                                <label class="text-black">Tài khoản<span class="text-danger">*</span></label>
+                                <input type="text" name="UseName" id="UseName" class="form-control" placeholder="Nhập tài khoản đăng nhập">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-8">
+                                <label class="text-black">Mật khẩu</label>
+                                <input type="password" name="Pass" id="Pass" class="form-control" placeholder="Nhập mật khẩu đăng nhập">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-lg-4">
+                                <input type="submit" class="btn btn-primary btn-lg btn-block" value="Đăng nhập">
+                            </div>
+                            <span class="signup">
+                                Nếu bạn chưa có tài khoản vui lòng?
+                                <a href="~/Home/DangKy">
+                                    <p>Đăng ký</p>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+@if (TempData["Message"] != null || TempData["Error"]!=null)
+{
+    @Html.Raw(TempData["Message"])
+    ;
+    @Html.Raw(TempData["Error"])
+    ;
+}
+<script>
+    if (document.getElementById("UseName").value == "" || document.getElementById("Pass").value == "" || document.getElementById("Pass1").value == "") {
+        alert("Vui lòng điền đầy đủ thông tin!");
+        return false;
+    }
+</script>

@@ -1,0 +1,79 @@
+﻿@model Fast_food.Models.SanPham
+@{
+    ViewData["Title"] = "Single";
+    Layout = "~/Views/Shared/_FastFood_Layout.cshtml";
+}
+<div class="site-wrap">
+    <div class="site-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="@("/SanPham/" +Model.HinhAnh)" alt="Image" class="img-fluid">
+                </div>
+                <div class="col-md-6">
+                    <h2 class="text-black">@Model.TenSp</h2>
+                    <span style="display:inline-block">
+                        Loại: <p data-product-id="@Model.IdLoai"></p>
+                    </span>
+                    <p>Giá bán: <strong class="text-primary h4">@Model.Gia</strong></p>
+                   <form asp-action="AddToCart" asp-controller="GioHang" asp-route-id="@Model.IdSp" method="post">
+                        <div class="mb-1 d-flex">
+                            <label for="option-sm" class="d-flex mr-3 mb-3">
+                                <span class="d-inline-block mr-2" style="top:-2px; position: relative;"><input type="radio" id="option-sm" value="1" name="Size"></span> <span class="d-inline-block text-black">Nhỏ</span>
+                            </label>
+                            <label for="option-md" class="d-flex mr-3 mb-3">
+                                <span class="d-inline-block mr-2" style="top:-2px; position: relative;"><input type="radio" id="option-md" value="2" name="Size"></span> <span class="d-inline-block text-black">Vừa</span>
+                            </label>
+                            <label for="option-lg" class="d-flex mr-3 mb-3">
+                                <span class="d-inline-block mr-2" style="top:-2px; position: relative;"><input type="radio" id="option-lg" value="3" name="Size"></span> <span class="d-inline-block text-black">Lớn</span>
+                            </label>
+                        </div>
+                        <div class="mb-5">
+                            <div class="input-group mb-3" style="max-width: 120px;">
+                                <div class="input-group-prepend">
+                                    <button class="btn btn-outline-primary js-btn-minus" type="button">&minus;</button>
+                                </div>
+                                <input type="text" class="form-control text-center" value="1" name="SoLuong" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-primary js-btn-plus" type="button">&plus;</button>
+                                </div>
+                            </div>
+
+                        </div>
+                        <p><button class="buy-now btn btn-sm btn-primary">Add To Cart</button></p>
+                   </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        var productIds = [];
+        // Lấy danh sách ID sản phẩm từ các phần tử TD
+        $('p[data-product-id]').each(function () {
+            var id = $(this).data('product-id');
+            productIds.push(id);
+        });
+
+        // Lấy danh sách tên sản phẩm dựa trên danh sách ID sản phẩm
+        $.ajax({
+            type: "POST",
+            url: "/Home/GetProductNames",
+            data: { productIds: productIds },
+            success: function (result) {
+                $('p[data-product-id]').each(function () {
+                    var id = $(this).data('product-id');
+                    var productName = result[id];
+                    $(this).text(productName);
+                });
+            },
+            error: function (xhr) {
+                console.log(xhr.responseText);
+            }
+        });
+    });
+</script>

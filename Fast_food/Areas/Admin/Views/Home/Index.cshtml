@@ -1,0 +1,284 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+<style>
+    .card .card-body {
+        height: 110px;
+        float: left;
+        padding: 1.25em;
+        position: relative;
+        width: 100%;
+    }
+</style>
+<!-- Content -->
+<div class="content">
+    <!-- Animated -->
+    <div class="animated fadeIn">
+        <!-- Widgets  -->
+        <div class="row">
+            <div class="col-lg-3 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="stat-widget-five">
+                            <div class="stat-icon dib flat-color-1">
+                                <i class="pe-7s-cash"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="text-left dib">
+                                    <div class="stat-text">$<span class="count">@ViewBag.tongdoanhthu</span></div>
+                                    <div class="stat-heading">Danh thu</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="stat-widget-five">
+                            <div class="stat-icon dib flat-color-2">
+                                <i class="pe-7s-box1"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="text-left dib">
+                                    <div class="stat-text"><span class="count">@ViewBag.sanpham</span></div>
+                                    <div class="stat-heading">Sản phẩm</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="stat-widget-five">
+                            <div class="stat-icon dib flat-color-2">
+                                <i class="pe-7s-cart"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="text-left dib">
+                                    <div class="stat-text"><span class="count">@ViewBag.donhang</span></div>
+                                    <div class="stat-heading">Đơn hàng</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="stat-widget-five">
+                            <div class="stat-icon dib flat-color-2">
+                                <i class="pe-7s-news-paper"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="text-left dib">
+                                    <div class="stat-text"><span class="count">@ViewBag.chuaduyet</span></div>
+                                    <div class="stat-heading">Đơn hàng chưa duyệt</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="stat-widget-five">
+                            <div class="stat-icon dib flat-color-3">
+                                <i class="pe-7s-browser"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="text-left dib">
+                                    <div class="stat-text"><span class="count">@ViewBag.danggiao</span></div>
+                                    <div class="stat-heading">Đang giao</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="stat-widget-five">
+                            <div class="stat-icon dib flat-color-3">
+                                <i class="pe-7s-note2"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="text-left dib">
+                                    <div class="stat-text"><span class="count">@ViewBag.dagiaothanhcong</span></div>
+                                    <div class="stat-heading">Đã giao thành công</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="stat-widget-five">
+                            <div class="stat-icon dib flat-color-4">
+                                <i class="pe-7s-users"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="text-left dib">
+                                    <div class="stat-text"><span class="count">@ViewBag.khachhang</span></div>
+                                    <div class="stat-heading">Khách hàng</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="stat-widget-five">
+                            <div class="stat-icon dib flat-color-4">
+                                <i class="pe-7s-id"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="text-left dib">
+                                    <div class="stat-text"><span class="count">@ViewBag.nhanvien</span></div>
+                                    <div class="stat-heading">Nhân viên</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Widgets -->
+    </div>
+    <!-- .animated -->
+</div>
+<!-- /.content -->
+@*Modal sửa*@
+<a href="#" onclick="return loadNhanVien(@Context.Session.GetInt32("IdTK"))" data-toggle="modal" data-target="#Edit-NhanVien">
+    <i class="fa fa-edit"></i>
+</a>
+<div class="modal fade" id="Edit-NhanVien" tabindex="-1" role="dialog" aria-labelledby="Edit-NhanVien-Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="Edit-NhanVien-Label">Thông tin tài khoản</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="~/Admin/NhanVien/Edit" method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="company" class=" form-control-label">Nhân viên</label>
+                        <input type="text" id="hoten" name="HoTen" placeholder="Nhập thông tin" class="form-control" readonly>
+                        <input type="text" id="idtk" name="IdTk" hidden class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Ảnh đại diện</label>
+                        <img src="" id="hinhanh" alt="Anh" width="200" height="200">
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-8">
+                            <div class="form-group">
+                                <div class="form-group">
+                                    <label class="form-control-label">Ngày sinh</label>
+                                    <input type="datetime" id="ngaysinh" name="NgaySinh" class="form-control" readonly>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <div class="form-group">
+                                <label for="postal-code" class=" form-control-label">Giới tính</label>
+                                <select name="GioiTinh" id="GioiTinh" class="form-control" readonly>
+                                    <option value="true">Nam</option>
+                                    <option value="false">Nữ</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <div class="form-group">
+                                <label for="postal-code" class=" form-control-label">Địa chỉ</label>
+                                <input type="text" id="diachi" name="DiaChi" class="form-control" readonly>
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <div class="form-group">
+                                <label for="postal-code" class=" form-control-label">Số điện thoại</label>
+                                <input type="tel" id="sdt" name="Sdt" class="form-control" readonly>
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <div class="form-group">
+                                <label for="postal-code" class=" form-control-label">Chức vụ</label>
+                                <select name="ChucVu" id="ChucVu" class="form-control" readonly se>
+                                    <option value="true">Quản lý</option>
+                                    <option value="false">Nhân viên</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+<script>
+    function refreshPage() {
+        location.reload();
+    }
+    function loadNhanVien(id) {
+        $.ajax({
+            url: '/Admin/Home/MyProfile/' + id,
+            type: 'GET',
+            contentType: 'application/json;charset=UTF-8',
+            dataType: 'json',
+            success: function (data) {
+                $('#hoten').val(data.hoTen);
+                var datetime = new Date(data.ngaySinh);
+                var formattedDate = datetime.toLocaleDateString("en-GB", { day: '2-digit', month: '2-digit', year: 'numeric' });
+                $('#idtk').val(data.idTk);
+                $('#ngaysinh').val(formattedDate);
+                $('#ns').val(formattedDate);
+                //$('#GioiTinh').val(data.gioiTinh);
+                if (data.gioiTinh) {
+                    $('#GioiTinh option[value="true"]').prop('selected', true);
+                } else {
+                    $('#GioiTinh option[value="false"]').prop('selected', true);
+                }
+                $('#diachi').val(data.diaChi);
+                $('#sdt').val(data.sdt);
+                //$('#ChucVu').val(data.chucVu);
+                if (data.chucVu) {
+                    $('#ChucVu option[value="true"]').prop('selected', true);
+                } else {
+                    $('#ChucVu option[value="false"]').prop('selected', true);
+                }
+                $('#hinhanh').attr('src', '/NhanVien/' + data.hinhAnh);
+                // Hiển thị Modal
+                $('#Edit-NhanVien').modal('show');
+            },
+            error: function (xhr) {
+                // handle errors if any
+                console.log(xhr.responseText);
+            }
+        });
+    }
+</script>
